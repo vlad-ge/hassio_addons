@@ -7,7 +7,7 @@
     ':semanticCommits'
   ],
   baseBranches: [
-    'alpha',
+    'main',
   ],
   gitAuthor: 'Renovate Bot <renovate@github.com>',
   packageRules: [
