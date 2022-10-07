@@ -1,0 +1,26 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:base',
+    'group:recommended',
+    ':rebaseStalePrs',
+    ':semanticCommits'
+  ],
+  baseBranches: [
+    'alpha',
+  ],
+  gitAuthor: 'Renovate Bot <renovate@github.com>',
+  packageRules: [
+    {
+      description: 'Automatically merge minor and patch-level updates',
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+        'digest',
+      ],
+      automerge: true,
+      automergeType: 'branch',
+      platformAutomerge: true,
+    },
+  ],
+}
